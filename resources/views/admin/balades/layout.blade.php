@@ -1,7 +1,9 @@
- 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+<head>
+    <title>balades Laravel 9 CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+ 
 
   <style type="text/css">
     .div_center{
@@ -45,46 +47,10 @@
       @include('admin.sidebar') 
         @include('admin.header')   
 
-        <div class="main-panel">
-            <div class="content-wrapper">
-
-            @if(session()->has('message'))
-            <div class="alert alert-success">
-{{session()->get('message')}}
-</div>
-@endif
-                <div class="div_center">
-                    <h1 class="h2_"> Add category</h1>
-                    <form action="{{url('add_category')}}" method="POST">
-                        @csrf
-                        <input class="input_color" type="text" name="category" placeholder="Write category name">
-                        <input type="submit" class="btn btn-primary" name="submit" value="Add category">
-                    </form>
-
-<table class="center">
-<tr>
-<td> Category name</td>
-<td> Action </td>
-</tr> 
-
-@foreach($data as $data)
-<tr>
-<td>  {{$data-> category_name}}</td>
-<td> 
-<a onclick="return confirm('Are you to delete')" 
-class="btn btn-danger" 
-href="{{url('delete_category', $data->id)}}"> DELETE </a>
-</td>
-</tr>
-@endforeach
-</table>
-                </div>
-            </div>
-            
-        </div>
-
-
-        @include('admin.script') 
-</div>
-  </body>
+  
+<div class="container">
+    @yield('content')
+</div> 
+  
+</body>
 </html>
