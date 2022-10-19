@@ -12,7 +12,7 @@
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
+                  <h5 class="mb-0 font-weight-normal">Administrateur </h5>
                   <span>Gold Member</span>
                 </div>
               </div>
@@ -98,6 +98,14 @@
             </a>
           </li>
 
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{{url('reservationbalade')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-playlist-play"></i>
+              </span>
+              <span class="menu-title">Reservation balade</span>
+            </a>
+          </li>
           <li class="nav-item menu-items">
             <a class="nav-link" href="admin/pages/tables/basic-table.html">
               <span class="menu-icon">
